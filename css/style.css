@@ -1,0 +1,957 @@
+body {
+    font-family: "Klee One", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+a {
+    color: #121212;
+    text-decoration: none;
+    font-size: 36px;
+}
+
+li {
+    list-style: none;
+}
+
+h2 {
+    font-size: 80px;
+}
+
+h3 {
+    font-size: 48px;
+}
+
+h4 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 32px;
+}
+
+img {
+    width: 100%;
+}
+
+.fadein {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s;
+}
+
+.wrapper {
+    /* border: 1px solid red; */
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.hamburger {
+    display: none;
+}
+
+#mask {
+    display: none;
+}
+
+.content {
+    margin: 120px auto 70px;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 120px;
+    margin-bottom: 70px;
+}
+
+.slick-slide {
+    margin: 0 20px;
+}
+
+.btn {
+    line-height: 50px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.btn::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: #01261c7d;
+    transition: all 0.3s ease;
+    width: 0%;
+    height: 2.5px;
+}
+
+.btn:hover::after {
+    width: 100%;
+}
+
+
+/*-------------------------------------------
+header
+-------------------------------------------*/
+
+header {
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+
+.site-title img {
+    margin-top: 10px;
+    width: 70px;
+}
+
+#nav ul {
+    display: flex;
+}
+
+#nav ul li {
+    margin-left: 20px;
+}
+
+/*-------------------------------------------
+section-title
+-------------------------------------------*/
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    display: flex;
+    max-width: 700px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto 10px;
+    /* border: 2px solid red; */
+    /*   疑似要素before,.text-line, 疑似要素afterの３つが横並びになる */
+}
+
+.section-title::before,
+.section-title::after {
+    content: "";
+    width: 150px;
+    border-top: 2px solid black;
+}
+
+
+/*-------------------------------------------
+sec-title
+-------------------------------------------*/
+
+.sec-title {
+    position: relative;
+    margin-top: 30px;
+}
+
+.sec-title::after {
+    content: "";
+    position: absolute;
+    height: 7px;
+    width: 350px;
+    background-color: #01261c7d;
+    top: 120px;
+    left: 0;
+}
+
+/*-------------------------------------------
+mainvisual
+-------------------------------------------*/
+.mainvisual {
+    /* height: 80vh; */
+    background: url(../img/トップ画像.jpg);
+    background-size: cover;
+    max-width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.mainvisual .catchcopy {
+    position: absolute;
+    top: 65%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*-------------------------------------------
+concept
+-------------------------------------------*/
+
+
+.concept .concept-text {
+    background-color: #01261c7d;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.concept .concept-text .concept-inner p {
+    /* border: 1px solid blue; */
+    margin-top: 20px;
+    font-size: 38px;
+    z-index: 10;
+    margin-bottom: 50px;
+}
+
+/*-------------------------------------------
+service-menu
+-------------------------------------------*/
+
+.service-menu .service img,
+.service-menu .menu img {
+    height: 45vh;
+}
+
+.service-menu ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-menu li {
+    width: 45%;
+    align-items: center;
+}
+
+.service-menu a {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.service-menu .menu .inner {
+    position: relative;
+}
+
+.service-menu .menu dl {
+    width: 80%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.service-menu .menu dd {
+    width: 60%;
+    text-align: right;
+}
+
+.service-menu .menu dt {
+    margin-top: 20px;
+    width: 90%;
+}
+
+.service-menu img {
+    width: 100%;
+}
+
+/*-------------------------------------------
+news
+-------------------------------------------*/
+
+.container ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container ul li {
+    border: 1px solid black;
+    /* margin: 10px 30px; */
+}
+
+.container ul li p {
+    font-size: 20px;
+}
+
+.news-date,
+.news-title {
+    margin: 10px 0;
+}
+
+
+.container img {
+    width: 100%;
+    height: 30vh;
+}
+
+
+/*-------------------------------------------
+info
+-------------------------------------------*/
+
+.info {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.info .map,
+.info dl {
+    width: 48%;
+}
+
+.info dl {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 24px;
+    padding-left: 30px;
+}
+
+.info dt {
+    width: 20%;
+    padding: 20px 10px;
+}
+
+.info dd {
+    width: 80%;
+    padding: 20px 10px;
+}
+
+#info .map iframe {
+    margin-top: 20px;
+    width: 100%;
+    height: 500px;
+}
+
+
+/*-------------------------------------------
+contact
+-------------------------------------------*/
+
+.contact {
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.contact-right,
+.contact-left {
+    width: 48%;
+    font-size: 24px;
+    /* border: 3px solid red; */
+}
+
+.contact-left dl {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+
+.contact-left dl dd {
+    width: 48%;
+}
+
+.contact .contact-right dt {
+    width: 15%;
+}
+
+.contact .contact-right dd {
+    width: 100%;
+}
+
+#contact {
+    margin-bottom: 100px;
+}
+
+#contact dd input,
+#contact dd textarea {
+    width: 100%;
+    border: solid 1px #c8c8c8;
+    padding: 10px;
+}
+
+#contact dd textarea {
+    height: 10rem;
+}
+
+#contact .button {
+    /* border: 1px solid blue; */
+    width: 100%;
+    text-align: center;
+}
+
+#contact .button input {
+    width: 150px;
+    background-color: #01261c7d;
+    border: 1px solid #01261c7d;
+    color: #fff;
+    padding: 10px 0;
+}
+
+#contact .button input:hover {
+    background: #a6a397a8;
+    border: 1px solid #a6a397a8;
+    transition: all 0.3s ease;
+}
+
+/*-------------------------------------------
+seervice.html
+-------------------------------------------*/
+
+.service-left,
+.service-right {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid green; */
+}
+
+.service-img {
+    width: 40%;
+    margin-top: 25px;
+    vertical-align: bottom;
+}
+
+.service-name {
+    width: 55%;
+}
+
+.service-text {
+    background-color: #a6a397a8;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* 
+アニメーション（スライド左）を実行
+
+slide-left：下で定義している「@keyframes slide-left」を実行
+0.5s：アニメーションが始まってから終わるまでの時間（0.5sかけて実行）
+ease-out：アニメーションの変化（開始時は早く、終了時は緩やかに変化）
+0s：アニメーションが始まるまでの時間（0sですぐに実行）
+1：アニメーションの繰り返し回数（1回）
+forwards：アニメーション終了時の状態をそのまま維持
+*/
+/* .slide-left {
+    animation: slide-left 0.8s ease-out 0s 1 forwards;
+}
+
+.slide-right {
+    animation: slide-right 0.8s ease-out 0s 1 forwards;
+} */
+
+/*
+アニメーション処理
+最初は「translateX(-50%);」で左側に隠しておく
+100%（0.5秒）かけて要素を表示させながら元の位置へ移動させる
+  */
+/* @keyframes slide-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+} */
+
+/*-------------------------------------------
+menu.html
+-------------------------------------------*/
+
+.menu-list ul {
+    /* border: 3px solid red; */
+    margin: 100px auto;
+}
+
+.menu-list ul li h3 {
+    text-align: center;
+    margin: 50px auto 30px;
+}
+
+.menu-list ul dl {
+    background-color: #a6a397a8;
+    padding: 40px 0;
+    font-size: 32px;
+}
+
+.menu-list ul dd {
+    width: 30%;
+    text-align: right;
+    /* border: 1px solid blue; */
+    margin: 0 auto;
+}
+
+.menu-list ul dt {
+    margin-top: 20px;
+    width: 70%;
+    margin: 0 auto;
+    /* border: 1px solid green; */
+}
+
+
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+
+footer {
+    padding-top: 20px;
+    background-color: #000d0a;
+    opacity: 65%;
+}
+
+footer .footerlogo {
+    display: flex;
+    justify-content: center;
+}
+
+footer .footerlogo img {
+    width: 75px;
+}
+
+
+/* ボタン全体の外枠指定 SNS調整 */
+.snsbtniti {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    max-width: 500px;
+    /* ボタンを設置する場所の最大横幅 */
+    margin: 30px auto;
+    /* ボタンを中央へ */
+}
+
+/* ボタン同士の余白調整 */
+.snsbtniti li {
+    flex: 0 0 33%;
+    /* ボタンを3つ並びへ */
+    text-align: center !important;
+}
+
+/* アイコンの位置を少し下げる */
+.flowbtn i {
+    position: relative;
+    top: 5px;
+}
+
+/* ボタン内テキスト調整 */
+.flowbtn div {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0;
+}
+
+/* ボタン全体 */
+.flowbtn {
+    font-family: 'Noto Sans Japaneses', sans-serif;
+    position: relative;
+    display: inline-block;
+    width: 75px;
+    height: 65px;
+    font-size: 30px;
+    border-radius: 4px;
+    transition: .5s;
+    text-decoration: none;
+    margin-bottom: 10px;
+
+    color: #fff;
+    /* ボタン内カラー基本は白固定 */
+    background-color: #a6a397;
+    /* 背景カラー */
+    border: solid 1px #A6A397;
+    /* 枠線の指定 */
+}
+
+/* マウスホバー時、ボタン内を白に指定 */
+.flowbtn:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+    /* アイコンカラー */
+    border: solid 1px #000;
+    /* 枠線カラー */
+    background-color: #fff;
+    /* 背景カラー */
+}
+
+@media (max-width: 950px) {
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .wrapper {
+        /* border: 1px solid red; */
+        width: 800px;
+    }
+
+
+    header {
+        position: fixed;
+        /* border: 3px solid blue; */
+        background-color: #01261c7d;
+        height: 75px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 20;
+    }
+
+
+    /*
+section-title
+*/
+    .section-title {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 50px;
+        display: flex;
+        max-width: 250px;
+        justify-content: space-between;
+        align-items: center;
+        margin: 30px auto 10px;
+        /* border: 2px solid red; */
+        /*   疑似要素before,.text-line, 疑似要素afterの３つが横並びになる */
+    }
+
+    .section-title::before,
+    .section-title::after {
+        content: "";
+        width: 30px;
+        border-top: 2px solid black;
+    }
+
+    /*
+sec-title
+*/
+
+    .sec-title {
+        position: relative;
+        margin-top: 0px;
+        top: 75px;
+    }
+
+    .sec-title::after {
+        content: "";
+        position: absolute;
+        height: 5px;
+        width: 200px;
+        background-color: #01261c7d;
+        left: 0;
+        top: 60px;
+    }
+
+
+    /*
+    mainvisual
+  */
+
+    .mainvisual {
+        /* background: url(../img/トップ画像.jpg); */
+        background-size: cover;
+        max-width: 100%;
+        height: 80vh;
+        top: 75px;
+        margin-bottom: 75px;
+
+    }
+
+    .mainvisual h3 {
+        font-size: 32px;
+        margin-bottom: 5px;
+    }
+
+    .mainvisual p {
+        font-size: 24px;
+    }
+
+    .mainvisual .catchcopy {
+        position: absolute;
+        top: 69%;
+        left: 34%;
+        transform: translate(-50%, -50%);
+    }
+
+    /*
+    concept
+  */
+
+    .concept .concept-text .concept-inner p {
+        font-size: 24px;
+    }
+
+    /*
+service-menu
+*/
+
+    .service img {
+        height: 34vh;
+    }
+
+    .service-menu ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .service-menu li {
+        width: 45%;
+    }
+
+    .service-menu a {
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .service-menu .menu dl {
+        width: 80%;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+    }
+
+    .service-menu .menu dd {
+        width: 60%;
+        text-align: right;
+    }
+
+    .service-menu .menu dt {
+        margin-top: 2px;
+        width: 90%;
+    }
+
+    /*
+info
+*/
+
+    .info {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .info .map,
+    .info dl {
+        width: 100%;
+    }
+
+    .info dl {
+        font-size: 14px;
+        padding-left: 100px;
+    }
+
+    .info dd {
+        padding-left: 120px;
+    }
+
+    #info .map iframe {
+        margin-top: 20px;
+        width: 100%;
+        height: 500px;
+    }
+
+    /*-------------------------------------------
+news
+-------------------------------------------*/
+    .slide-items li {
+        /* border: 1px solid green; */
+        margin: 0 20px;
+    }
+
+    .slide-items .news-text {
+        font-size: 12px;
+    }
+
+
+    /*-------------------------------------------
+contact
+-------------------------------------------*/
+
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact-left,
+    .contact-right {
+        /* border: 2px solid gold; */
+        width: 100%;
+        font-size: 24px;
+        text-align: center;
+        text-align: left;
+    }
+
+
+    .contact .contact-left dl {
+        display: flex;
+        /* font-size: 14px; */
+        /* border: 1px solid blue; */
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .contact .contact-left dt dd {
+        display: inline-block;
+        /* border: 3px solid red; */
+    }
+
+
+
+    /* #contact {
+        margin-bottom: 10px;
+    } */
+
+    #contact dd input,
+    #contact dd textarea {
+        width: 100%;
+        border: solid 1px #c8c8c8;
+        padding: 10px;
+    }
+
+    #contact dd textarea {
+        height: 10rem;
+    }
+
+    #contact .button input {
+        width: 150px;
+        background-color: #01261c7d;
+        color: #fff;
+        padding: 10px;
+    }
+
+
+    /*
+ハンバーガーメニュー
+  */
+    #nav {
+        width: 300px;
+        /* background: #fff; */
+        /* padding: 25px; */
+        position: fixed;
+        top: 0;
+        left: -300px;
+        bottom: 0;
+        opacity: 0;
+        overflow-y: auto;
+        transition: 0.5s;
+        z-index: 20;
+    }
+
+    .open #nav {
+        left: 0px;
+        color: #000;
+        background: #a6a397;
+        opacity: 1;
+    }
+
+    .open #nav ul {
+        flex-direction: column;
+    }
+
+    #nav ul.nav-menu {
+
+        margin-bottom: 30px;
+    }
+
+    #nav ul li {
+        padding: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+        max-width: 30px;
+        height: 30px;
+        cursor: pointer;
+        position: fixed;
+        top: 22px;
+        right: 40px;
+        transition: 0.5s;
+        z-index: 20;
+    }
+
+    .hamburger span {
+        width: 30px;
+        height: 2px;
+        background-color: #121212;
+        border-radius: 4px;
+        display: block;
+        position: absolute;
+        left: 0;
+        transition: 0.5s;
+    }
+
+    .hamburger span:nth-child(1) {
+        top: 4px;
+    }
+
+    .hamburger span:nth-child(2) {
+        top: 14px;
+    }
+
+    .hamburger span:nth-child(3) {
+        bottom: 4px;
+    }
+
+    .open .hamburger span {
+        background-color: #121212;
+    }
+
+    .open .hamburger span:nth-child(1) {
+        transform: translateY(10px) rotate(-45deg);
+    }
+
+    .open .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .open .hamburger span:nth-child(3) {
+        transform: translateY(-10px) rotate(45deg);
+    }
+
+    #mask {
+        display: none;
+        transition: 0.5s;
+    }
+
+    .open #mask {
+        width: 100%;
+        height: 100%;
+        background-color: #a6a397a8;
+        /* background-color: #01261c7d; */
+        cursor: pointer;
+        display: block;
+        opacity: 0.8;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 8;
+    }
+
+    /*-------------------------------------------
+menu.html
+-------------------------------------------*/
+
+    .menu-list ul li dl {
+        font-size: 16px;
+    }
+
+}
